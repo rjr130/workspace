@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 2 elements from project &apos;PhotoChewLai&apos;&#x0A;- Original project: &apos;PhotoChewLai&apos;&#x0A;- Original elements:&#x0A;     Photo.PhotoDatabase.java&#x0A;     Photo.PhotoOrganizer.java" description="Delete elements" element1="/src&lt;Photo{PhotoDatabase.java" element2="/src&lt;Photo{PhotoOrganizer.java" elements="2" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1330299819212" subPackages="false" version="1.0"/>
+</session>

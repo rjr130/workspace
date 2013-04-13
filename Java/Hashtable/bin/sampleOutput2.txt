@@ -1,0 +1,7 @@
+Parameters used:
+  # items to hash: 5
+  random # seed: 292929
+  max load factor: 0.8
+  initial size of hash table: 2
+  max chain length: none
+  output file name: sampleOutput2.txt

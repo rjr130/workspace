@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename field &apos;List&apos; in &apos;PhotoDatabase&apos; to &apos;photoDB&apos;&#x0A;- Original project: &apos;Photo&apos;&#x0A;- Original element: &apos;PhotoDatabase.List&apos;&#x0A;- Renamed element: &apos;PhotoDatabase.photoDB&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" delegate="false" deprecate="false" description="Rename field &apos;List&apos;" flags="589826" getter="false" id="org.eclipse.jdt.ui.rename.field" input="/src&lt;{PhotoDatabase.java[PhotoDatabase^List" name="photoDB" references="true" setter="false" stamp="1330563670715" textual="false" version="1.0"/>
+</session>

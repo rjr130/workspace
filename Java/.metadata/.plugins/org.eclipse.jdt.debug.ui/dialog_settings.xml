@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.jdt.debug.ui.MAIN_METHOD_SELECTION_DIALOG">
+		<item value="true" key="ShowStatusLine"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0A;&lt;History&gt;&#x0A;&lt;historyRootNode&gt;&#x0A;&lt;infoNode&gt;=CarGamesLab/\/CarGamesLab\/CarGameClasses.jar&amp;lt;(CarGameMainClass.class[CarGameMainClass&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=CSE131-Liu-418788/src&amp;lt;nip{Dialog.java[Dialog&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=CSE131-Liu-418788/src&amp;lt;lab4{Lab4.java[Lab4&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=Photo/src&amp;lt;{PhotoOrganizer.java[PhotoOrganizer&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=CS367HW/src&amp;lt;HW2{HW3.java[HW3&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=BasicGraph/src&amp;lt;{GraphAnalyser.java[GraphAnalyser&lt;/infoNode&gt;&#x0A;&lt;infoNode&gt;=NaiveBayesClassifier/src&amp;lt;{HW3.java[HW3&lt;/infoNode&gt;&#x0A;&lt;/historyRootNode&gt;&#x0A;&lt;/History&gt;" key="History"/>
+		<section name="DialogBoundsSettings">
+			<item value="600" key="DIALOG_WIDTH"/>
+			<item value="0" key="DIALOG_Y_ORIGIN"/>
+			<item value="100" key="DIALOG_X_ORIGIN"/>
+			<item value="500" key="DIALOG_HEIGHT"/>
+			<item value="1|Lucida Grande|11.0|0|COCOA|1|LucidaGrande" key="DIALOG_FONT_NAME"/>
+		</section>
+	</section>
+	<section name="org.eclipse.jdt.internal.debug.ui.ExpressionInformationControlCreator$ExpressionInformationControl">
+		<item value="200" key="SashWeightDetails"/>
+		<item value="200" key="SashWeightTree"/>
+		<item value="156" key="HEIGHT"/>
+		<item value="600" key="WIDTH"/>
+	</section>
+</section>

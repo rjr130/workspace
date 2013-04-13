@@ -1,0 +1,14 @@
+#Tue Feb 21 00:44:46 CST 2012
+org.eclipse.team.svn.ui.panel.callback.AskTrustSSLServerPanel.width=530
+org.eclipse.team.svn.ui.panel.callback.PromptCredentialsPanel.width=470
+org.eclipse.team.svn.ui.panel.callback.PromptCredentialsPanel.height=221
+org.eclipse.team.svn.ui.panel.reporting.ErrorCancelPanel.height=131
+org.eclipse.team.svn.ui.panel.reporting.ErrorCancelPanel.width=640
+org.eclipse.team.svn.ui.panel.callback.AskTrustSSLServerPanel.height=294
+org.eclipse.team.svn.ui.panel.local.CommitPanel.height=406
+history.repositoryURL=aHR0cHM6Ly9zaGVsbC5jZWMud3VzdGwuZWR1Ojg0NDMvY3NlMTMxX3NwMTIvc3ZuL0xpdS00MTg3ODg\=;aHR0cHM6Ly9zaGVsbC5jZWMud3VzdGwuZWR1Ojg0NDMvY3NlMTMxX3NwMTIvc3ZuL0xJVS00MTg3ODg\=
+history.repositoryUser=cnVpcWkubGl1
+org.eclipse.team.svn.ui.panel.local.CommitPanel.width=600
+eclipse.preferences.version=1
+firstStartup=false
+preference.repository.repositoryBrowser=false

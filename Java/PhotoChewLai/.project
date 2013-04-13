@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>PhotoChewLai</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>src/Photo/PhotoDatabase.java</name>
+			<type>1</type>
+			<locationURI>PARENT-4-PROJECT_LOC/Desktop/PhotoDatabase.java</locationURI>
+		</link>
+		<link>
+			<name>src/Photo/PhotoOrganizer.java</name>
+			<type>1</type>
+			<locationURI>PARENT-4-PROJECT_LOC/Desktop/PhotoOrganizer.java</locationURI>
+		</link>
+	</linkedResources>
+</projectDescription>

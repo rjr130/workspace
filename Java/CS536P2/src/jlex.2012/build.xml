@@ -1,0 +1,48 @@
+<!-- This buildfile illustrates how JLex is used to build a simple scanner
+     (file filter)
+
+      It supports the following targets:
+      
+      (1) compile (this is the default):
+           Run JLex to build a simple scanner (Yylex).
+           Then compile all Java source files in folder src
+           
+      (2) test
+          Test the scanner using file "words"
+          
+      (3) clean
+          "Clean up" by removing all .class files. Used in preparation
+          for a full recompilation.
+ -->
+
+	
+<project default="compile">
+
+ <target name ="clean">
+   <delete dir="bin">
+   </delete>
+ </target>
+
+ <target name ="test">
+   <java classpath="bin;." classname="Main" fork="true" input="words">
+   </java>
+ </target>
+
+ <target name ="compile">
+   <mkdir dir="bin">
+   </mkdir>
+   <java  classpath="." classname="JLex.Main" fork="true" > 
+    <arg value="./ex.jlex">
+    </arg>
+   </java>
+    <move file="ex.jlex.java" todir="src">
+    </move>
+   <javac  includeantruntime="false" srcdir="src" destdir="bin"
+            classpath="." >
+   </javac>
+ </target>
+
+
+
+
+</project>

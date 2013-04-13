@@ -1,0 +1,12 @@
+
+public class Calculator {
+	public static void main (String args[]) {
+		int result = 1;
+		for (int i = 0; i < 14; i++) {
+			result = result * 2;
+		}
+		System.out.println(result);
+		result = result % 19;
+		System.out.println(result);
+	}
+}

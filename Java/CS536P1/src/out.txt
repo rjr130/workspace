@@ -1,0 +1,12 @@
+
+Symbol Table
+{}
+
+
+Symbol Table
+{name3=type3}
+{name1=type1, name2=type2}
+
+
+Symbol Table
+

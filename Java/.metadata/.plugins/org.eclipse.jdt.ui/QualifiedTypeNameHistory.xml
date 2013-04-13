@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="java.awt.Graphics"/>
+<fullyQualifiedTypeName name="CarGame"/>
+<fullyQualifiedTypeName name="ReversiGUI"/>
+<fullyQualifiedTypeName name="Reversi"/>
+<fullyQualifiedTypeName name="ReversiAction"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="DecTreeNode"/>
+<fullyQualifiedTypeName name="javax.xml.ws.handler.MessageContext.Scope"/>
+<fullyQualifiedTypeName name="java.util.ArrayDeque"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="au.com.bytecode.opencsv.CSVWriter"/>
+</qualifiedTypeNameHistroy>

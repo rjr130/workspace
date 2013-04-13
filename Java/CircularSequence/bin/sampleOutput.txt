@@ -1,0 +1,172 @@
+enter command (? for help): ?
+s (save)  l (load)      d (display)
+n (next)  p (previous)  j (jump)
+a (add after)    i (insert before)
+c (copy)  v (paste)     x (cut)
+f (find)  r (replace)   q (quit)
+enter command (? for help): d
+no messages
+enter command (? for help): j
+invalid command
+enter command (? for help): j hello
+invalid command
+enter command (? for help): j 10
+no messages
+enter command (? for help): i
+invalid command
+enter command (? for help): s info.txt
+no messages to save
+enter command (? for help): f
+invalid command
+enter command (? for help): f a
+no messages
+enter command (? for help): a H1 due 2/10
+>>> H1 due 2/10 <<<
+enter command (? for help): a H3 due 2/27
+>>> H3 due 2/27 <<<
+    H1 due 2/10
+enter command (? for help): i H2 due 2/20
+    H1 due 2/10
+>>> H2 due 2/20 <<<
+    H3 due 2/27
+enter command (? for help): d
+H2 due 2/20
+H3 due 2/27
+H1 due 2/10
+enter command (? for help): s messages.txt
+enter command (? for help): d
+H2 due 2/20
+H3 due 2/27
+H1 due 2/10
+enter command (? for help): v
+nothing to paste
+enter command (? for help): n
+    H2 due 2/20
+>>> H3 due 2/27 <<<
+    H1 due 2/10
+enter command (? for help): a P1 due 2/29
+    H3 due 2/27
+>>> P1 due 2/29 <<<
+    H1 due 2/10
+enter command (? for help): j 3
+    H2 due 2/20
+>>> H3 due 2/27 <<<
+    P1 due 2/29
+enter command (? for help): d
+H3 due 2/27
+P1 due 2/29
+H1 due 2/10
+H2 due 2/20
+enter command (? for help): i Exam 1 3/8
+    H2 due 2/20
+>>> Exam 1 3/8 <<<
+    H3 due 2/27
+enter command (? for help): i Exam 2 4/17
+    H2 due 2/20
+>>> Exam 2 4/17 <<<
+    Exam 1 3/8
+enter command (? for help): c
+enter command (? for help): j -2
+    P1 due 2/29
+>>> H1 due 2/10 <<<
+    H2 due 2/20
+enter command (? for help): i P2 due 3/30
+    P1 due 2/29
+>>> P2 due 3/30 <<<
+    H1 due 2/10
+enter command (? for help): v
+    P1 due 2/29
+>>> Exam 2 4/17 <<<
+    P2 due 3/30
+enter command (? for help): d
+Exam 2 4/17
+P2 due 3/30
+H1 due 2/10
+H2 due 2/20
+Exam 2 4/17
+Exam 1 3/8
+H3 due 2/27
+P1 due 2/29
+enter command (? for help): f H
+    P2 due 3/30
+>>> H1 due 2/10 <<<
+    H2 due 2/20
+enter command (? for help): f H
+    H1 due 2/10
+>>> H2 due 2/20 <<<
+    Exam 2 4/17
+enter command (? for help): f P1
+    H3 due 2/27
+>>> P1 due 2/29 <<<
+    Exam 2 4/17
+enter command (? for help): f Quiz
+not found
+enter command (? for help): d
+P1 due 2/29
+Exam 2 4/17
+P2 due 3/30
+H1 due 2/10
+H2 due 2/20
+Exam 2 4/17
+Exam 1 3/8
+H3 due 2/27
+enter command (? for help): x
+    H3 due 2/27
+>>> Exam 2 4/17 <<<
+    P2 due 3/30
+enter command (? for help): p
+    Exam 1 3/8
+>>> H3 due 2/27 <<<
+    Exam 2 4/17
+enter command (? for help): p
+    Exam 2 4/17
+>>> Exam 1 3/8 <<<
+    H3 due 2/27
+enter command (? for help): v
+    Exam 2 4/17
+>>> P1 due 2/29 <<<
+    Exam 1 3/8
+enter command (? for help): d
+P1 due 2/29
+Exam 1 3/8
+H3 due 2/27
+Exam 2 4/17
+P2 due 3/30
+H1 due 2/10
+H2 due 2/20
+Exam 2 4/17
+enter command (? for help): l info.txt
+unable to load
+enter command (? for help): l messages.txt
+enter command (? for help): d
+P1 due 2/29
+Exam 1 3/8
+H3 due 2/27
+Exam 2 4/17
+P2 due 3/30
+H1 due 2/10
+H2 due 2/20
+Exam 2 4/17
+H2 due 2/20
+H3 due 2/27
+H1 due 2/10
+enter command (? for help): r H4 due 3/6
+    H1 due 2/10
+>>> H4 due 3/6 <<<
+    Exam 1 3/8
+enter command (? for help): d
+H4 due 3/6
+Exam 1 3/8
+H3 due 2/27
+Exam 2 4/17
+P2 due 3/30
+H1 due 2/10
+H2 due 2/20
+Exam 2 4/17
+H2 due 2/20
+H3 due 2/27
+H1 due 2/10
+enter command (? for help): s messages.txt
+warning: file already exists, will be overwritten
+enter command (? for help): q
+quit

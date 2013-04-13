@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="243" key="DIALOG_WIDTH"/>
+		<item value="364" key="DIALOG_Y_ORIGIN"/>
+		<item value="379" key="DIALOG_HEIGHT"/>
+		<item value="624" key="DIALOG_X_ORIGIN"/>
+		<item value="1|Lucida Grande|11.0|0|COCOA|1|LucidaGrande" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="true" key="wrap"/>
+		<item value="false" key="isRegEx"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="false" key="wholeword"/>
+		<item value="CarGame" key="selection"/>
+		<list key="findhistory">
+			<item value="cargame"/>
+			<item value="main"/>
+			<item value="system"/>
+			<item value="startsite"/>
+			<item value="linklist"/>
+			<item value="resultlist"/>
+			<item value="searchedsite"/>
+			<item value="searchesite"/>
+		</list>
+		<list key="replacehistory">
+			<item value="startSite"/>
+			<item value="linkList"/>
+			<item value="resultList"/>
+			<item value="searchedSite"/>
+			<item value="searcheSite"/>
+			<item value="findBiggestMutualInformation"/>
+			<item value="levelProbability"/>
+			<item value="tmp"/>
+		</list>
+	</section>
+</section>

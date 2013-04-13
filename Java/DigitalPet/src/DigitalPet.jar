@@ -1,0 +1,272 @@
+//add file header comment
+///////////////////////////////////////////////////////////////////////////////
+//                   ALL STUDENTS COMPLETE THESE SECTIONS
+// Title:            Digital Pet
+// Files:            (list of source files)
+// Semester:         Fall 2011
+//
+// Author:           Junrui Ruan jruan@wisc.edu ( , rjr130@gmail.com )
+// CS Login:         junrui
+// Lecturer's Name:  Jim Skrentny
+// Lab Section:      (your lab section number)
+//
+//                   PAIR PROGRAMMERS COMPLETE THIS SECTION
+// Pair Partner:     (name of your pair programming partner)
+// CS Login:         (partner's login name)
+// Lecturer's Name:  (name of your partner's lecturer)
+// Lab Section:      (your partner's lab section number)
+//
+//                   STUDENTS WHO GET HELP FROM ANYONE OTHER THAN THEIR PARTNER
+// Credits:          (list anyone who helped you write your program)
+///////////////////////////////////////////////////////////////////////////////
+
+//add class header comment
+/**
+  * (Write a succinct description of this class here. You should avoid
+  * wordiness and redundancy. If necessary, additional paragraphs should
+  * be preceded by <p>, the html tag for a new paragraph.)
+  *
+  * <p>Bugs: (a list of bugs and other problems)
+  *
+  * @author (Junrui Ruan)
+  */
+
+//any necessary imports
+import java.util.Random;
+import java.util.Scanner;
+
+public class DigitalPet
+{
+
+	//add main method header comment
+
+	public static void main(String[] args)
+	{
+		//declare and initialize a Scanner
+		//DO NOT MAKE ANY ADDITIONAL Scanner OBJECTS!
+		Scanner input = new Scanner(System.in);
+		
+		//get seed value from user
+		//you may assume the user inputs an int for the seed
+		System.out.println("Please enter a seed value [integer]:");
+		int seed = input.nextInt();
+		//use value entered to make the pseudo random number generator
+		//DO NOT MAKE ANY ADDITIONAL Random OBJECTS!
+		Random rand = new Random(seed);
+
+		//declare and initialize any other needed variables
+		int happiness = 5;
+		int health = 5;
+		int hunger = 5;                                              // Define the 3 major attributes.
+		
+		int happiness0 = 5;
+		int health0 = 5;
+		int hunger0 = 5;                                             // Define the 3 major attributes backups.
+		
+		int day = 1;                                                 // Define days.
+		
+		int temp = 0;                                                // Create a temp number for use if necessary.
+		int temp2 = 0;                                               // Create another temp number.
+		int temp3 = 0;                                               // Create another temp number.
+		
+		int i = 0;                                                   // Create an counter. 
+		int j = 0;                                                   // Create another counter
+		
+		int flag = 0;                                                // Create a signal.
+		
+		//begin day loop
+		for(day = 1; day <= 9; ++day)
+		{			
+			//print daily report
+			System.out.println();
+			System.out.println("Good morning.");                     // Friendly Greeting.
+			
+			System.out.println("Today is day: " + day);              // Report which day is today.
+			
+			System.out.println("Here's how your pet is doing:");     // Here is your pet's attribute.
+			System.out.println("Happiness:" + happiness);
+			System.out.println("Health:" + health);
+			System.out.println("hunger:" + hunger);                  // Report ends.
+			
+			//begin menu loop
+			for(j = 1; j <= 5; ++j)                                      
+			{
+				flag = 0;                                            // Set the signal = 0;
+				System.out.println("What would you like to do?");    // Menu Starts.
+			
+				//prompt user for their decision (feed, play, heal, or sleep)
+				System.out.println("1: Feed");
+				System.out.println("2: Play");
+				System.out.println("3: Heal");
+				System.out.println("4: Sleep");                      // Display the Decisions.
+				
+			    temp = input.nextInt();                              // Use temp defined before to get the input number
+				//if user chose feed
+				if (temp == 1)
+				{
+					//prompt for which food to eat
+					System.out.println("What would you like to feed your pet?");
+					System.out.println("1: Broccoli");
+					System.out.println("2: Candy");                  // Choice on which food to eat.
+					
+					temp = input.nextInt();                          // Use temp to get the choice number.
+						//update attributes accordingly
+					if (temp == 1)                                   // If feed Broccoli.
+					{
+						temp2 = rand.nextInt(2);                     // Get a random number from 0 or 1.
+						happiness = happiness - temp2;               // 50% chance that happiness = happiness-1.
+						health++;
+						hunger++;
+					}
+					else if (temp == 2)                              // If feed Candy.
+					{
+						temp2 = rand.nextInt(2);
+						health = health - temp2;
+						hunger++;
+						happiness++;
+					}
+					if (j == 5)
+					{
+						flag = 1;
+					}
+				}
+				//if user chose play
+				if (temp == 2)
+				{
+					//update attributes accordingly
+					happiness++;
+					hunger--;
+					if (j == 5)
+					{
+						flag = 1;
+					}
+				}	
+				//if user chose heal
+				if (temp == 3)
+				{
+					//update attributes accordingly
+					if (health <= 5)
+					{
+						health = health + 5;
+					}
+					else
+					{
+						health = 10;
+					}
+					hunger--;
+					happiness--;
+					System.out.println("UW Hospital is nice! I feel healthier, but I'm exhausted - good night!");
+					break;                                           // The day is over.
+				}
+				//if user chose sleep
+				if (temp == 4)
+				{
+					//update attributes accordingly
+					if (j <= 4)
+					{
+						happiness--;
+					}
+					else if (j > 4)
+					{
+						happiness++;
+					}
+					break;                                           // The day is over.
+				}	
+				//if day is over, adjust attributes and end menu loop
+				if (j == 5)
+				{
+					if (flag == 1)
+					{
+						health--;
+					}
+				}
+			//end of menu loop
+			}
+			//randomly update happiness, health, and hunger
+			temp = rand.nextInt(3);
+			temp2 = rand.nextInt(2);
+			if (temp2 == 1)
+			{
+				temp = 0 - temp;
+			}
+			happiness = happiness + temp;                            // Randomly set happiness.
+			
+			health = health + rand.nextInt(2);                       // Randomly set health.
+			
+			hunger = hunger - rand.nextInt(3);                       // Randomly set hunger.
+			//print today's changes report
+			System.out.println("Your pet's condition changed as follows today");
+			temp = happiness - happiness0;
+			temp2 = health - health0;
+			temp3 = hunger - hunger0;
+			if (temp >= 0)
+			{
+				System.out.println("Happiness: +" + temp);
+			}
+			else 
+			{
+				System.out.println("Happiness: " + temp);
+			}
+			
+			if (temp2 >= 0)
+			{
+				System.out.println("Health: +" + temp2);
+			}
+			else 
+			{
+				System.out.println("Health: " + temp2);
+			}
+			
+			if (temp3 >= 0)
+			{
+				System.out.println("Hunger: +" + temp3);
+			}
+			else 
+			{
+				System.out.println("Hunger: " + temp3);
+			}
+			
+			//update overall happiness, health, and hunger
+			happiness0 = happiness;
+			health0 = health;
+			hunger0 = hunger;
+			//adjust happiness, health, and hunger values to be within bounds
+			if (happiness <= 0)
+			{
+				System.out.println("I am very unhappy now!!!");
+				happiness = 0;
+			}
+			if (happiness >= 10)
+			{
+				System.out.println("I feel great!");
+				happiness = 10;
+			}
+			if (health <= 0)
+			{
+				System.out.println("I feel very sick now!");
+				health = 0;
+			}
+			if (health >= 10)
+			{
+				System.out.println("I feel very healthy now!");
+				health = 10;
+			}
+			if (hunger <= 0)
+			{
+				System.out.println("I really want to have something to eat!");
+				hunger = 0;
+			}
+			if (hunger >= 10)
+			{
+				System.out.println("Too much food...");
+				hunger = 10;
+			}
+		//end of day loop
+		}
+		//print end-of-simulation report
+		System.out.println("Here's how your pet did:");
+		System.out.println("Happiness: " + happiness);
+		System.out.println("Health: " + health);
+		System.out.println("Hunger: " + hunger);
+	}
+}

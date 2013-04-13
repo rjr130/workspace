@@ -1,0 +1,36 @@
+	RandomPlayer randomPlayer1=new RandomPlayer("black");
+	RandomPlayer randomPlayer2=new RandomPlayer("white");
+	CompPlayer compPlayer1=new CompPlayer("black");
+	CompPlayer compPlayer2=new CompPlayer("white");
+
+
+
+if (action.ACTION_TYPE != ReversiAction.STEP){
+				if (gui.getCurrentPlayer().equals(randomPlayer1)||gui.getCurrentPlayer().equals(compPlayer1)){
+					if (gui.getCurrentPlayer().getName()=="RandomPlayer"){
+						board.getGrid(randomPlayer1.calcMove(board.toIntGrid())[0],randomPlayer1.calcMove(board.toIntGrid())[1]).setSquare(
+								ReversiGUI.BLACK);
+					}
+						else if (gui.getCurrentPlayer().getName()=="CompPlayer"){
+							
+							board.getGrid(compPlayer1.calcMove(board.toIntGrid())[0],compPlayer1.calcMove(board.toIntGrid())[1]).setSquare(
+									ReversiGUI.BLACK);
+						}
+					if (updateGrid(ReversiGUI.BLACK, action.ROW,
+							action.COLUMN)) { // Whether there is disk
+												// flip
+						gui.update(board.toIntGrid(), false,
+								ReversiGUI.EMPTY, true);
+						count--;
+					}
+				
+				if (this.checkOver() == 1) { // Whether the game is over
+					gui.update(board.toIntGrid(), true,
+							ReversiGUI.WHITE, false);
+					break;
+				} else if (this.checkOver() == -1) {
+					gui.update(board.toIntGrid(), true,
+							ReversiGUI.BLACK, false);
+					break;
+				}
+			}}

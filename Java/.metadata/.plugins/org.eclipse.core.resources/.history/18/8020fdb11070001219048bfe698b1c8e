@@ -1,0 +1,61 @@
+import java.io.*;
+
+/** A test program for excercising the scanner of Project 4, CS 536, Fall 2004.
+ */
+public class P1 {
+    /** The name of the test file. */
+    private static String fname = "test1.alg";
+
+    /** Runs the test.
+     * @param args command-line arguments.  One optional argument: name
+     *            of the test file.  If omitted, use the wired-in default
+     *            "testdata".
+     */
+    public static void main(String[] args) {
+        try {
+            if (args.length != 2) {
+                System.err.println("usage: java P5 srcfile.alg objfile.spim");
+                System.exit(1);
+            }
+            String fname = args[0];
+            CG.open(args[1]);
+            Err.setFile(fname);
+            Parser p = new Parser(fname);
+            ProcDeclNode mainProg = (ProcDeclNode) p.parse(false);
+            if (mainProg == null || Err.errors() > 0) {
+                System.out.println("parse failed");
+                System.exit(1);
+            }
+            SymbolTable st = new SymbolTable();
+            st.push();
+            mainProg.resolveNames(st);
+            if (Err.errors() > 0) {
+                System.exit(1);
+            }
+            mainProg.resolveTypes(null);
+            if (Err.errors() > 0) {
+                System.exit(1);
+            }
+
+            if (true) { // change to "false" for less verbose output
+                PrintWriter out = new PrintWriter(System.out, true);
+                mainProg.unparse(out, 0);
+                out.println();
+                out.flush();
+            }
+
+            mainProg.codeGen(null);
+            if (Err.errors() > 0) {
+                System.exit(1);
+            }
+
+            CG.close();
+        } catch (FileNotFoundException e) {
+            System.err.println("Cannot open file " + e.getMessage());
+            System.exit(1);
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.exit(1);
+        }
+    } // main(String[])
+} // class P5
